@@ -1,0 +1,8 @@
+module top_module (
+	input logic unsigned [3:0]A, B, // 4-bit unsigned input numbers A and B
+	output logic[6:0]D[1:0]		// 7-bit signals D0 and D1 to displays
+);
+
+
+
+endmodule

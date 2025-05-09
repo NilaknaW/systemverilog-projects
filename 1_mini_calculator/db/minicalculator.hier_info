@@ -1,0 +1,415 @@
+|four_bit_signed_multiplier_tb
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut
+A[0] => Mul.DATAB
+A[0] => Mul.DATAB
+A[0] => Mul.DATAB
+A[0] => Mul.DATAB
+A[1] => Mul.DATAB
+A[1] => Mul.DATAB
+A[1] => Mul.DATAB
+A[1] => Mul.DATAB
+A[2] => Mul.DATAB
+A[2] => Mul.DATAB
+A[2] => Mul.DATAB
+A[2] => Mul.DATAB
+A[3] => Mul.IN0
+A[3] => Mul.DATAB
+A[3] => Mul.IN0
+A[3] => Mul.DATAB
+A[3] => Mul.IN0
+A[3] => Mul.DATAB
+A[3] => Mul.IN0
+A[3] => Mul.DATAB
+B[0] => Mul.OUTPUTSELECT
+B[0] => Mul.OUTPUTSELECT
+B[0] => Mul.OUTPUTSELECT
+B[0] => Mul.OUTPUTSELECT
+B[0] => Mul.OUTPUTSELECT
+B[0] => Mul.OUTPUTSELECT
+B[0] => Mul.OUTPUTSELECT
+B[0] => Mul.OUTPUTSELECT
+B[1] => Mul.OUTPUTSELECT
+B[1] => Mul.OUTPUTSELECT
+B[1] => Mul.OUTPUTSELECT
+B[1] => Mul.OUTPUTSELECT
+B[1] => Mul.OUTPUTSELECT
+B[1] => Mul.OUTPUTSELECT
+B[1] => Mul.OUTPUTSELECT
+B[2] => Mul.OUTPUTSELECT
+B[2] => Mul.OUTPUTSELECT
+B[2] => Mul.OUTPUTSELECT
+B[2] => Mul.OUTPUTSELECT
+B[2] => Mul.OUTPUTSELECT
+B[2] => Mul.OUTPUTSELECT
+B[3] => Mul.IN1
+B[3] => Mul.IN1
+B[3] => Mul.IN1
+B[3] => Mul.IN1
+B[3] => Mul.OUTPUTSELECT
+B[3] => Mul.OUTPUTSELECT
+B[3] => Mul.OUTPUTSELECT
+B[3] => Mul.OUTPUTSELECT
+B[3] => Mul.OUTPUTSELECT
+product[0] <= eight_bit_adder:add[2].eightadder.Sum
+product[1] <= eight_bit_adder:add[2].eightadder.Sum
+product[2] <= eight_bit_adder:add[2].eightadder.Sum
+product[3] <= eight_bit_adder:add[2].eightadder.Sum
+product[4] <= eight_bit_adder:add[2].eightadder.Sum
+product[5] <= eight_bit_adder:add[2].eightadder.Sum
+product[6] <= eight_bit_adder:add[2].eightadder.Sum
+product[7] <= eight_bit_adder:add[2].eightadder.Sum
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+Ci => C[0].IN1
+Sum[0] <= one_bit_adder:add[0].fa.Sum
+Sum[1] <= one_bit_adder:add[1].fa.Sum
+Sum[2] <= one_bit_adder:add[2].fa.Sum
+Sum[3] <= one_bit_adder:add[3].fa.Sum
+Sum[4] <= one_bit_adder:add[4].fa.Sum
+Sum[5] <= one_bit_adder:add[5].fa.Sum
+Sum[6] <= one_bit_adder:add[6].fa.Sum
+Sum[7] <= one_bit_adder:add[7].fa.Sum
+Cout <= one_bit_adder:add[7].fa.Cout
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[0].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[1].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[2].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[3].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[4].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[5].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[6].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[0].eightadder|one_bit_adder:add[7].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+Ci => C[0].IN1
+Sum[0] <= one_bit_adder:add[0].fa.Sum
+Sum[1] <= one_bit_adder:add[1].fa.Sum
+Sum[2] <= one_bit_adder:add[2].fa.Sum
+Sum[3] <= one_bit_adder:add[3].fa.Sum
+Sum[4] <= one_bit_adder:add[4].fa.Sum
+Sum[5] <= one_bit_adder:add[5].fa.Sum
+Sum[6] <= one_bit_adder:add[6].fa.Sum
+Sum[7] <= one_bit_adder:add[7].fa.Sum
+Cout <= one_bit_adder:add[7].fa.Cout
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[0].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[1].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[2].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[3].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[4].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[5].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[6].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[1].eightadder|one_bit_adder:add[7].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+Ci => C[0].IN1
+Sum[0] <= one_bit_adder:add[0].fa.Sum
+Sum[1] <= one_bit_adder:add[1].fa.Sum
+Sum[2] <= one_bit_adder:add[2].fa.Sum
+Sum[3] <= one_bit_adder:add[3].fa.Sum
+Sum[4] <= one_bit_adder:add[4].fa.Sum
+Sum[5] <= one_bit_adder:add[5].fa.Sum
+Sum[6] <= one_bit_adder:add[6].fa.Sum
+Sum[7] <= one_bit_adder:add[7].fa.Sum
+Cout <= one_bit_adder:add[7].fa.Cout
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[0].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[1].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[2].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[3].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[4].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[5].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[6].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_signed_multiplier_tb|four_bit_signed_multiplier:dut|eight_bit_adder:add[2].eightadder|one_bit_adder:add[7].fa
+A => w[0].IN0
+A => w[2].IN0
+B => w[0].IN1
+B => w[2].IN1
+Ci => w[1].IN1
+Ci => Sum.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

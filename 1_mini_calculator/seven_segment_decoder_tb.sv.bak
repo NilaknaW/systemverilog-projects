@@ -1,0 +1,10 @@
+module seven_segment_decoder_tb();
+	timeunit 1ns; timeprecision 100ps;
+	
+	logic [3:0]num;
+	logic [6:7]seg;
+	
+	seven_segment_decoder dut(.*);
+
+
+endmodule

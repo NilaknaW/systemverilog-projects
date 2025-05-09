@@ -1,0 +1,81 @@
+|top_tb
+
+
+|top_tb|top:dut
+pvalid => pvalid.IN1
+sready => sready.IN1
+clk => clk.IN2
+rstn => rstn.IN2
+pdata[0] => pdata[0].IN1
+pdata[1] => pdata[1].IN1
+pdata[2] => pdata[2].IN1
+pdata[3] => pdata[3].IN1
+pready <= p2s:myp2s.pready
+svalid <= svalid.DB_MAX_OUTPUT_PORT_TYPE
+sdata <= sdata.DB_MAX_OUTPUT_PORT_TYPE
+unlock_valid <= fsmml:myfsmml.unlock_valid
+unlock <= fsmml:myfsmml.unlock
+incorrect <= fsmml:myfsmml.incorrect
+
+
+|top_tb|top:dut|p2s:myp2s
+pvalid => nextState.DATAB
+sready => nextState.IN1
+clk => state~0.CLK
+clk => register[0].CLK
+clk => register[1].CLK
+clk => register[2].CLK
+clk => register[3].CLK
+clk => count[0].CLK
+clk => count[1].CLK
+rstn => count[0].ACLR
+rstn => count[1].ACLR
+rstn => state~0.ACLR
+rstn => register[0].ENA
+rstn => register[3].ENA
+rstn => register[2].ENA
+rstn => register[1].ENA
+pdata[0] => register.DATAB
+pdata[1] => register.DATAB
+pdata[2] => register.DATAB
+pdata[3] => register.DATAB
+pready <= state~0.DB_MAX_OUTPUT_PORT_TYPE
+svalid <= state~0.DB_MAX_OUTPUT_PORT_TYPE
+sdata <= register[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_tb|top:dut|fsmml:myfsmml
+clk => incorrect~reg0.CLK
+clk => unlock~reg0.CLK
+clk => unlock_valid~reg0.CLK
+clk => bit_count[0].CLK
+clk => bit_count[1].CLK
+clk => state~1.DATAIN
+rstn => bit_count[0].ACLR
+rstn => bit_count[1].ACLR
+rstn => unlock~reg0.ACLR
+rstn => unlock_valid~reg0.ACLR
+rstn => state~3.DATAIN
+rstn => incorrect~reg0.ENA
+ser_valid => bit_count.OUTPUTSELECT
+ser_valid => bit_count.OUTPUTSELECT
+ser_valid => unlock_valid.IN0
+ser_valid => unlock_valid.IN0
+ser_valid => Selector4.IN3
+ser_valid => Selector0.IN3
+ser_valid => next_state.OUTPUTSELECT
+ser_valid => Selector1.IN2
+ser_valid => always0.IN0
+ser_valid => next_state.OUTPUTSELECT
+ser_valid => Selector2.IN1
+ser_valid => Selector3.IN1
+ser_data => unlock_valid.IN1
+ser_data => next_state.DATAA
+ser_data => unlock_valid.IN1
+ser_data => always0.IN1
+ser_data => next_state.DATAA
+unlock_valid <= unlock_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+unlock <= unlock~reg0.DB_MAX_OUTPUT_PORT_TYPE
+incorrect <= incorrect~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,5 @@
+module four_bit_unsigned_multiplier (
+	input logic unsigned [3:0]A,B;
+	output logic unsigned [7:00]product;
+);
+

@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "unlock_valid",
+					"strict" : false
+				},
+				{
+					"name" : "unlock",
+					"strict" : false
+				},
+				{
+					"name" : "incorrect",
+					"strict" : false
+				},
+				{
+					"name" : "ser_data",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rstn",
+					"strict" : false
+				},
+				{
+					"name" : "ser_valid",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

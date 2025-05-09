@@ -1,0 +1,92 @@
+# Reading pref.tcl
+# do minicalculator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1 {C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/one_bit_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:12:18 on Mar 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1" C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/one_bit_adder.sv 
+# -- Compiling module one_bit_adder
+# 
+# Top level modules:
+# 	one_bit_adder
+# End time: 20:12:18 on Mar 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1 {C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/eight_bit_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:12:18 on Mar 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1" C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/eight_bit_adder.sv 
+# -- Compiling module eight_bit_adder
+# 
+# Top level modules:
+# 	eight_bit_adder
+# End time: 20:12:18 on Mar 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1 {C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/four_bit_signed_multiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:12:18 on Mar 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1" C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/four_bit_signed_multiplier.sv 
+# -- Compiling module four_bit_signed_multiplier
+# 
+# Top level modules:
+# 	four_bit_signed_multiplier
+# End time: 20:12:18 on Mar 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1 {C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/four_bit_signed_multiplier_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:12:18 on Mar 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1" C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/four_bit_signed_multiplier_tb.sv 
+# -- Compiling module four_bit_signed_multiplier_tb
+# 
+# Top level modules:
+# 	four_bit_signed_multiplier_tb
+# End time: 20:12:18 on Mar 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1 {C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/four_bit_signed_multiplier_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:12:18 on Mar 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1" C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/four_bit_signed_multiplier_tb.sv 
+# -- Compiling module four_bit_signed_multiplier_tb
+# 
+# Top level modules:
+# 	four_bit_signed_multiplier_tb
+# End time: 20:12:18 on Mar 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  four_bit_signed_multiplier_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" four_bit_signed_multiplier_tb 
+# Start time: 20:12:18 on Mar 01,2025
+# Loading sv_std.std
+# Loading work.four_bit_signed_multiplier_tb
+# Loading work.four_bit_signed_multiplier
+# Loading work.eight_bit_adder
+# Loading work.one_bit_adder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# A =  x * B =  x, Product =xxxxxxxx, A^B = x, Mul[0] = xxxxxxxx, Mul[1] = xxxxxxx0, Mul[2] = xxxxxx00, Mul[3] = xxxxx000
+# A =  0 * B =  0, Product =00000000, A^B = 0, Mul[0] = 00000000, Mul[1] = 00000000, Mul[2] = 00000000, Mul[3] = 00000000
+# A = -2 * B =  0, Product =00000000, A^B = 1, Mul[0] = 00000000, Mul[1] = 00000000, Mul[2] = 00000000, Mul[3] = 00000000
+# A =  2 * B =  3, Product =00000110, A^B = 0, Mul[0] = 00000010, Mul[1] = 00000100, Mul[2] = 00000000, Mul[3] = 00000000
+# A =  2 * B = -3, Product =01001011, A^B = 1, Mul[0] = 11110010, Mul[1] = 00000000, Mul[2] = 11001000, Mul[3] = 10010000
+# A = -2 * B =  3, Product =11111011, A^B = 1, Mul[0] = 11111110, Mul[1] = 11111100, Mul[2] = 00000000, Mul[3] = 00000000
+# A = -2 * B = -3, Product =10110110, A^B = 0, Mul[0] = 00001110, Mul[1] = 00000000, Mul[2] = 00111000, Mul[3] = 01110000
+# A =  7 * B =  7, Product =00110001, A^B = 0, Mul[0] = 00000111, Mul[1] = 00001110, Mul[2] = 00011100, Mul[3] = 00000000
+# A = -7 * B = -7, Product =01010001, A^B = 0, Mul[0] = 00001001, Mul[1] = 00000000, Mul[2] = 00000000, Mul[3] = 01001000
+# A = -7 * B =  7, Product =11010001, A^B = 1, Mul[0] = 11111001, Mul[1] = 11110010, Mul[2] = 11100100, Mul[3] = 00000000
+# A =  7 * B = -7, Product =10101111, A^B = 1, Mul[0] = 11110111, Mul[1] = 00000000, Mul[2] = 00000000, Mul[3] = 10111000
+# End time: 20:17:05 on Mar 01,2025, Elapsed time: 0:04:47
+# Errors: 0, Warnings: 0

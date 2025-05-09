@@ -1,0 +1,11 @@
+module top_tb;
+	timeunit 1ns; timeprecision 1ps;
+	
+	logic clk = 1, rstn = 0;
+	localparam CLK_PERIOD = 10;
+	always #(CLK_PERIOD/2) clk <= ~clk;
+	
+	parameter N=4;
+	logic [N-1:0] pdata;
+	logic pvalid = 0, pready, sready=0, sdata, svalid;
+	logic unlock_valid, unlock, incorrect;

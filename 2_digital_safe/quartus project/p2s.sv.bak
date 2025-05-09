@@ -1,0 +1,7 @@
+module p2s #(N=4) (
+	input logic par_valid, ser_ready, clk, rstn,
+	input logic [N-1:0]par_data,
+	output logic par_ready, ser_valid, ser_data
+);
+
+localparam N_BITS = clog2(N);

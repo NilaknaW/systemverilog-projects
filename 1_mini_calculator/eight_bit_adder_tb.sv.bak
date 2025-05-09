@@ -1,0 +1,4 @@
+module eight_bit_adder_tb;
+	timeunit 1ns;
+	timeprecision 100ps;
+	

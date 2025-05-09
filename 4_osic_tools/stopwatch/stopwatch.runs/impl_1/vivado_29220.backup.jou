@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Apr 28 11:16:58 2025
+# Process ID         : 29220
+# Current directory  : C:/Users/Nilakna/Projects_local/SVADS/SVADS_A4/stopwatch/stopwatch.runs/impl_1
+# Command line       : vivado.exe -log stopwatch.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source stopwatch.tcl -notrace
+# Log file           : C:/Users/Nilakna/Projects_local/SVADS/SVADS_A4/stopwatch/stopwatch.runs/impl_1/stopwatch.vdi
+# Journal file       : C:/Users/Nilakna/Projects_local/SVADS/SVADS_A4/stopwatch/stopwatch.runs/impl_1\vivado.jou
+# Running On         : LAPTOP-MV50F5E2
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16782 MB
+# Swap memory        : 13421 MB
+# Total Virtual      : 30203 MB
+# Available Virtual  : 7440 MB
+#-----------------------------------------------------------
+source stopwatch.tcl -notrace

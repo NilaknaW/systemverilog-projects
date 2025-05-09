@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1 {C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/one_bit_adder.sv}
+vlog -sv -work work +incdir+C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1 {C:/Users/Nilakna/Projects_local/SVADS/SVADS_A1/one_bit_adder_tb.sv}
+

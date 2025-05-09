@@ -1,0 +1,8 @@
+module top (
+	input logic pvalid, sready, clk, rstn, // inputs to p2s module
+	input logic [N-1:0]pdata,
+	
+	output logic unlock_valid, unlock, incorrect //outputs of fsmml module
+);
+
+//output logic pready, svalid, sdata

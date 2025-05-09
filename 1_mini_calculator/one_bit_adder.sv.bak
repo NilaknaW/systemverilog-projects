@@ -1,0 +1,9 @@
+module one_bit_adder(
+	input logic A, B, Ci,
+	output logic Sum, Co
+);
+	always_comb begin
+		assign Sum = A ^ B ^ Ci;
+		assign Cout = (A^B) & c | A & B;
+	end
+endmodule

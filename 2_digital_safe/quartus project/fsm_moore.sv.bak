@@ -1,0 +1,4 @@
+module fsm_moore (
+	input logic clk, rstn, ser_valid, ser_data, 
+	output logic unlock_valid, unlock, incorrect
+);

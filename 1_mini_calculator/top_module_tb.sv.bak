@@ -1,0 +1,5 @@
+module top_module_tb ();
+	timeunit 1ns; timeprecision 100ps;
+	logic unsigned [3:0]A,B;
+	logic 
+endmodule

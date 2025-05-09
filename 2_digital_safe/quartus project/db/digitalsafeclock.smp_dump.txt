@@ -1,0 +1,9 @@
+
+State Machine - |fsm_moore|state
+Name state.W state.D state.C state.B state.A state.I 
+state.I 0 0 0 0 0 0 
+state.A 0 0 0 0 1 1 
+state.B 0 0 0 1 0 1 
+state.C 0 0 1 0 0 1 
+state.D 0 1 0 0 0 1 
+state.W 1 0 0 0 0 1 

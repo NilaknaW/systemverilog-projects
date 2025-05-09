@@ -1,0 +1,7 @@
+module eight_bit_adder (
+	input logic unsigned [7:0] A, B,
+	input logic Ci,
+	output logic unsigned [7:0] Sum,
+	output logic Cout
+);
+

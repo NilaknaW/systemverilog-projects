@@ -1,0 +1,30 @@
+icc2_shell> place_pins -self -ports {clk rstn rx tx}
+Information: Starting 'place_pins' (FLW-8000)
+Information: Time: 2025-03-30 01:45:45 / Session:  00:32:02 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 638 MB (FLW-8100)
+Load DB...
+CPU Time for load db: 00:00:00.01u 00:00:00.00s 00:00:00.01e: 
+
+Printing app options for 'plan.pins*':
+plan.pins.incremental                         :  true                
+plan.pins.pin_range                           :  10                  
+plan.pins.layer_range                         :  5                   
+
+Min routing layer: M1
+Max routing layer: MRDL
+
+
+CPU Time for Top Level Pre-Route Processing: 00:00:00.02u 00:00:00.00s 00:00:00.02e: 
+CPU Time for Leaf Level Pre-Route Processing: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of block ports: 4
+Number of block pin locations assigned from router: 0
+CPU Time for Pin Preparation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of PG ports on blocks: 0
+Number of pins created: 4
+CPU Time for Pin Creation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Total Pin Placement CPU Time: 00:00:00.05u 00:00:00.01s 00:00:00.06e: 
+Information: Ending   'place_pins' (FLW-8001)
+Information: Time: 2025-03-30 01:45:45 / Session:  00:32:02 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 641 MB (FLW-8100)
+1
+icc2_shell> save_lib -all
+Saving all libraries...
+1
